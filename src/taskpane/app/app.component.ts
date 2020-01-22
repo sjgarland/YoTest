@@ -7,24 +7,22 @@ const template = require("./app.component.html");
   template
 })
 export default class AppComponent {
-  welcomeMessage = "Welcome";
+  welcomeMessage = "YoTest";
+  selectedRange = '';
+  sampleList = ['One', 'Two', 'Three'];
+
+  constructor() {
+    // Ensure that selectedRange has a value before displaying the task pane
+    this.run();
+  }
 
   async run() {
     try {
       await Excel.run(async context => {
-        /**
-         * Insert your Excel code here
-         */
         const range = context.workbook.getSelectedRange();
-
-        // Read the range address
         range.load("address");
-
-        // Update the fill color
-        range.format.fill.color = "yellow";
-
         await context.sync();
-        console.log(`The range address was ${range.address}.`);
+        this.selectedRange = range.address;
       });
     } catch (error) {
       console.error(error);
