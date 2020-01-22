@@ -1,9 +1,9 @@
 {
-  "name": "office-addin-taskpane-angular",
+  "name": "yotest",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OfficeDev/Office-Addin-TaskPane-Angular.git"
+    "url": "https://github.com/sjgarland/YoTest.git"
   },
   "license": "MIT",
   "config": {
