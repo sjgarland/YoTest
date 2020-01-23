@@ -1,5 +1,5 @@
 <header class="ms-welcome__header ms-bgColor-neutralLighter ms-u-fadeIn500">
-    <img width="90" height="90" src="../../../assets/logo-filled.png" alt="Contoso Task Pane Add-in" title="Contoso Task Pane Add-in" />
+    <img width="90" height="90" src="../../../assets/logo-filled.png" alt="YoTest Add-in" title="YoTest Add-in" />
     <h1 class="ms-fontSize-su ms-fontWeight-light ms-fontColor-neutralPrimary">{{welcomeMessage}}</h1>
 </header>
 <main class="ms-welcome__main">
@@ -7,9 +7,8 @@
         Current selection: {{selectedRange}}
     </p>
     <ul><li *ngFor="let item of sampleList">{{item}}</li></ul>
-    <p class="ms-font-l">Select a new range, or modify the source files, and then click <b>Refresh</b>.</p>
-    <div role="button" class="ms-welcome__action ms-Button ms-Button--hero ms-u-slideUpIn20" (click)="run()">
-        <span class="ms-Button-label">Refresh</span>
-        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--ChevronRight"></i></span>
-    </div>
+    <p class="ms-font-l">
+        Select a new range and then click
+        <span class="ms-Button-label" (click)="run()"><b><em>Refresh</em></b></span>.
+    </p>
 </main>
