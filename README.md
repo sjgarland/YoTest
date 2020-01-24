@@ -34,6 +34,10 @@ For YoTest, the folder _dist_ was uploaded to _stageonesoftware.com_ and renamed
 
 Change the name and repository URL.
 
+### taskpane.html
+
+Change the title and the sideload message.
+
 ### app.component.ts
 
 Change the code in the _run_ method.  If the _run_ method generates content for the task pane, create a constructor that calls _run_ to generate that content before the task pane is displayed.
