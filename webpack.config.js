@@ -12,6 +12,7 @@ module.exports = async (env, options) => {
     devtool: "source-map",
     entry: {
       polyfill: "@babel/polyfill",
+      angularCommon: "@angular/common",
       taskpane: "./src/taskpane/taskpane.ts",
       commands: "./src/commands/commands.ts"
     },
@@ -33,7 +34,14 @@ module.exports = async (env, options) => {
         {
           test: /\.html$/,
           exclude: /node_modules/,
-          use: "html-loader"
+          use: [
+            {
+              loader: "html-loader",
+              options: {
+                minimize: false
+              }
+            }
+          ]
         },
         {
           test: /\.(png|jpg|jpeg|gif)$/,
@@ -46,7 +54,7 @@ module.exports = async (env, options) => {
       new HtmlWebpackPlugin({
         filename: "taskpane.html",
         template: "./src/taskpane/taskpane.html",
-        chunks: ["polyfill", "taskpane"]
+        chunks: ["angularCommon", "polyfill", "taskpane"]
       }),
       new CopyWebpackPlugin([
         {
@@ -72,6 +80,6 @@ module.exports = async (env, options) => {
       port: process.env.npm_package_config_dev_server_port || 3000
     }
   };
-
+  
   return config;
 };
