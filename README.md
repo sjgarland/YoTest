@@ -63,6 +63,12 @@ In YoTest, the new content used an Angular directive (_*ngFor_) and selector (_&
 
 Replace _icon-16.png_, _icon-32.png_, and _icon-80.png_ by new icons.  Add _icon-64.png_ for use under Mac OS X.  Delete _logo_filled.png_.
 
+## Puzzles
+
+Why doesn't _templateUrl_ work inside _@Component_ in _app.component.ts_ and _test.component.ts_?  Why must these files _require_ a template instead?
+
+Can the Angular CLI be installed and used to generate components and services?
+
 ## Copyright
 
 Copyright (c) 2020 Stage One Software. All rights reserved.
