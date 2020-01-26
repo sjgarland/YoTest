@@ -3,10 +3,14 @@
     <h1 class="ms-fontSize-su ms-fontWeight-light ms-fontColor-neutralPrimary">{{welcomeMessage}}</h1>
 </header>
 <main class="ms-welcome__main">
+    <h3>Sample use of *ngFor</h3>
+    <ul><li *ngFor="let item of sampleList">{{item}}</li></ul>
+    <h3>Sample use of an Angular component</h3>
+    <app-test></app-test>
+    <h3>Sample interaction with Excel</h3>
     <p class="ms-font-l">
         Current selection: {{selectedRange}}
     </p>
-    <ul><li *ngFor="let item of sampleList">{{item}}</li></ul>
     <p class="ms-font-l">
         Select a new range and then click
         <span class="ms-Button-label" (click)="run()"><b><em>Refresh</em></b></span>.
