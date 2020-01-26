@@ -57,7 +57,7 @@ YoTest was customized by changing code that highlights and logs the selected ran
 
 Replace the content.  
 
-In YoTest, the new content used an Angular directive (_*ngFor_) and selector (_<app-test></app-test>), and it displayed the value _{{selectedRange}}_ of the new instance variable.
+In YoTest, the new content used an Angular directive (_*ngFor_) and selector (_&lt;app-test&gt;&lt;/app-test&gt;_), and it displayed the value _{{selectedRange}}_ of the new instance variable.
 
 ### assets
 
