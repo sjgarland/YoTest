@@ -12,7 +12,6 @@ module.exports = async (env, options) => {
     devtool: "source-map",
     entry: {
       polyfill: "@babel/polyfill",
-      angularCommon: "@angular/common",
       taskpane: "./src/taskpane/taskpane.ts",
       commands: "./src/commands/commands.ts"
     },
@@ -54,7 +53,7 @@ module.exports = async (env, options) => {
       new HtmlWebpackPlugin({
         filename: "taskpane.html",
         template: "./src/taskpane/taskpane.html",
-        chunks: ["angularCommon", "polyfill", "taskpane"]
+        chunks: ["polyfill", "taskpane"]
       }),
       new CopyWebpackPlugin([
         {
