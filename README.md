@@ -71,4 +71,4 @@ Can the Angular CLI be installed and used to generate components and services?
 
 ## Copyright
 
-Copyright (c) 2020 Stage One Software. All rights reserved.
+Copyright &copy; 2020 Stage One Software. All rights reserved.
