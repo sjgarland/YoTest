@@ -5,6 +5,7 @@
 
  html,
  body {
+     font-family: Helvetica, sans-serif;
      width: 100%;
      height: 100%;
      margin: 0;
@@ -19,7 +20,7 @@
  .ms-welcome__header {
     padding: 20px;
     padding-bottom: 30px;
-    padding-top: 100px;
+    padding-top: 30px;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
