@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
-  <Id>14e6de19-767f-4f6e-bbf3-8fd3202659eb</Id>
+  <Id>3ae03572-2a01-43a9-9cb9-b22d83814df5</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Stage One Software</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="YoTest"/>
-  <Description DefaultValue="Tester for task-pane add-in created by Yo Office Generator for Excel with Angular/TypesScript"/>
+  <Description DefaultValue="Updated task-pane add-in created by Yeoman Office Generator for Excel with Angular/TypesScript"/>
   <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-80.png"/>
   <SupportUrl DefaultValue="https://stageonesoftware.com"/>
   <AppDomains>
-    <AppDomain>stageonesoftware.com</AppDomain>
+    <AppDomain>https://stageonesoftware.com</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Workbook"/>
@@ -32,22 +32,22 @@
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <OfficeTab id="TabHome">
               <Group id="CommandsGroup">
-                <Label resid="CommandsGroup.Label" />
+                <Label resid="CommandsGroup.Label"/>
                 <Icon>
-                  <bt:Image size="16" resid="Icon.16x16" />
-                  <bt:Image size="32" resid="Icon.32x32" />
-                  <bt:Image size="80" resid="Icon.80x80" />
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
                 </Icon>
                 <Control xsi:type="Button" id="TaskpaneButton">
-                  <Label resid="TaskpaneButton.Label" />
+                  <Label resid="TaskpaneButton.Label"/>
                   <Supertip>
-                    <Title resid="TaskpaneButton.Label" />
-                    <Description resid="TaskpaneButton.Tooltip" />
+                    <Title resid="TaskpaneButton.Label"/>
+                    <Description resid="TaskpaneButton.Tooltip"/>
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="Icon.16x16" />
-                    <bt:Image size="32" resid="Icon.32x32" />
-                    <bt:Image size="80" resid="Icon.80x80" />
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
                     <TaskpaneId>ButtonId1</TaskpaneId>
@@ -67,18 +67,18 @@
         <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
-        <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html" />
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html" />
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="Get started with YoTest" />
-        <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group" />
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane" />
+        <bt:String id="GetStarted.Title" DefaultValue="Get started with YoTest"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="YoTest"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Show taskpane"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="YoTest loaded succesfully. Go to the Home tab and click the 'Show Taskpane' button to use it." />
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane" />
+        <bt:String id="GetStarted.Description" DefaultValue="YoTest loaded succesfully.  Click 'Show Taskpane' on the Home tab to use it."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to show the taskpane"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

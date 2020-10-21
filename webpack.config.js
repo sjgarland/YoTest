@@ -2,12 +2,14 @@ const devCerts = require("office-addin-dev-certs");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const fs = require("fs");
-// const webpack = require("webpack");
 /* global module, process, require */
 
+const urlDev="https://localhost:3000/";
+const urlProd="https://stageonesoftware.com/YoTest/"; // CHANGED THIS TO THE PRODUCTION DEPLOYMENT LOCATION
+
 module.exports = async (env, options) => {
-  // const dev = options.mode === "development";
+  const dev = options.mode === "development";
+  const buildType = dev ? "dev" : "prod";
   const config = {
     devtool: "source-map",
     entry: {
@@ -44,7 +46,10 @@ module.exports = async (env, options) => {
         },
         {
           test: /\.(png|jpg|jpeg|gif)$/,
-          use: "file-loader"
+          loader: "file-loader",
+          options: {
+            name: '[path][name].[ext]',          
+          }
         }
       ]
     },
@@ -63,6 +68,17 @@ module.exports = async (env, options) => {
         {
           to: "assets",
           from: "./assets"
+        },
+        {
+          to: "[name]." + buildType + ".[ext]",
+          from: "manifest*.xml",
+          transform(content) {
+            if (dev) {
+              return content;
+            } else {
+              return content.toString().replace(new RegExp(urlDev, "g"), urlProd);
+            }
+          }
         }
       ]),
       new HtmlWebpackPlugin({
@@ -79,6 +95,6 @@ module.exports = async (env, options) => {
       port: process.env.npm_package_config_dev_server_port || 3000
     }
   };
-  
+
   return config;
 };
