@@ -8,7 +8,6 @@ import { CommonModule } from "@angular/common";
   template: require("./app.component.html")
 })
 export default class AppComponent {
-  welcomeMessage = "YoTest";
   selectedRange = '';
   sampleList = ['One', 'Two', 'Three'];
 

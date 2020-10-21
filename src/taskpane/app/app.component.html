@@ -1,18 +1,15 @@
 <header class="ms-welcome__header ms-bgColor-neutralLighter ms-u-fadeIn500">
     <img width="90" height="90" src="../../../assets/logo-filled.png" alt="YoTest Add-in" title="YoTest Add-in" />
-    <h1 class="ms-fontSize-su ms-fontWeight-light ms-fontColor-neutralPrimary">{{welcomeMessage}}</h1>
 </header>
 <main class="ms-welcome__main">
     <h3>Sample use of *ngFor</h3>
     <ul><li *ngFor="let item of sampleList">{{item}}</li></ul>
-    <h3>Sample use of an Angular component</h3>
-    <app-test></app-test>
     <h3>Sample interaction with Excel</h3>
     <p class="ms-font-l">
         Current selection: {{selectedRange}}
     </p>
     <p class="ms-font-l">
-        Select a new range and then click
+        Select a range and click
         <span class="ms-Button-label" (click)="run()"><b><em>Refresh</em></b></span>.
     </p>
 </main>
