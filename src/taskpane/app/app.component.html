@@ -6,10 +6,10 @@
     <ul><li *ngFor="let item of sampleList">{{item}}</li></ul>
     <h3>Sample interaction with Excel</h3>
     <p class="ms-font-l">
-        Current selection: {{selectedRange}}
-    </p>
-    <p class="ms-font-l">
         Select a range and click
         <span class="ms-Button-label" (click)="run()"><b><em>Refresh</em></b></span>.
+    </p>
+    <p class="ms-font-l">
+        Current selection: {{selectedRange}}
     </p>
 </main>

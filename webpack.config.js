@@ -60,41 +60,43 @@ module.exports = async (env, options) => {
         template: "./src/taskpane/taskpane.html",
         chunks: ["polyfill", "taskpane"]
       }),
-      new CopyWebpackPlugin([
-        {
-          to: "taskpane.css",
-          from: "./src/taskpane/taskpane.css"
-        },
-        {
-          to: "assets",
-          from: "./assets"
-        },
-        {
-          to: "[name]." + buildType + ".[ext]",
-          from: "manifest*.xml",
-          transform(content) {
-            if (dev) {
-              return content;
-            } else {
-              return content.toString().replace(new RegExp(urlDev, "g"), urlProd);
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            to: "taskpane.css",
+            from: "./src/taskpane/taskpane.css"
+          },
+          {
+            to: "assets",
+            from: "./assets"
+          },
+          {
+            to: "[name]." + buildType + ".[ext]",
+            from: "manifest*.xml",
+            transform(content) {
+              if (dev) {
+                return content;
+              } else {
+                return content.toString().replace(new RegExp(urlDev, "g"), urlProd);
+              }
             }
           }
-        }
-      ]),
-      new HtmlWebpackPlugin({
-        filename: "commands.html",
-        template: "./src/commands/commands.html",
-        chunks: ["polyfill", "commands"]
-      })
-    ],
-    devServer: {
-      headers: {
-        "Access-Control-Allow-Origin": "*"
-      },      
-      https: (options.https !== undefined) ? options.https : await devCerts.getHttpsServerOptions(),
-      port: process.env.npm_package_config_dev_server_port || 3000
-    }
+        ]}),
+        new HtmlWebpackPlugin({
+          filename: "commands.html",
+          template: "./src/commands/commands.html",
+          chunks: ["polyfill", "commands"]
+        })
+      ],
+      devServer: {
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        },      
+        https: (options.https !== undefined) ? options.https : await devCerts.getHttpsServerOptions(),
+        port: process.env.npm_package_config_dev_server_port || 3000
+      }
+    };
+    
+    return config;
   };
-
-  return config;
-};
+  
