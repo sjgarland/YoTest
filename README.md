@@ -77,31 +77,9 @@ Why doesn't `templateUrl` work inside `@Component` in `app.component.ts`?  Why m
 
 Why is it necessary to click _Show Taskpane_ twice in the production build to load the taskpane in Excel for Windows?
 
-Can the packages listed in `package.json` be updated without creating a problem with Internet Explorer 11 (specifically, causing it to fail to load the taskpane)?  Ran `npm audit fix --force`.  Ran `npm outdated --long` to see what can be updated.  Ran `npm update` to fix the packages shown in red.  Everything seems to be ok. Checking packages printed in yellow, which require changes to `package.json`.  Here are ones that could be updated:
+Why does Internet Explorer no longer load the taskpane for [Formula Forge](https://appsource.microsoft.com/en-us/product/office/WA200001816?tab=Overview), an add-in published in the AppSource marketplace?  Is the problem caused by the versions of the packages listed in `package.json`?
 
-| Name | YoTest version | Current Yeoman version | Latest version |
-|------|----------------|------------------------|----------------|
-|
-
-
-| Package                            | Current  | Wanted  | Latest  | Used now by Yeoman |
-|------------------------------------|----------|---------|---------|--------------------|
-| @angular/common                    | 5.2.11   | 5.2.11  | 10.2.0  | 5.2.9              |
-| @angular/compiler                  | 5.2.11   | 5.2.11  | 10.2.0  | 5.2.9              |
-| @angular/platform-browser          | 5.2.11   | 5.2.11  | 10.2.0  | 5.2.9              |
-| @angular/platform-browser-dynamic  | 5.2.11   | 5.2.11  | 10.2.0  | 5.2.9              |
-| file-loader                        | 4.3.0    | 4.3.0   | 6.1.1   | 4.2.0              |
-| html-loader                        | 0.5.5    | 0.5.5   | 1.3.2   | 0.5.5              |
-| html-webpack-plugin                | 3.2.0    | 3.2.0   | 4.5.0   | 4.3.0 *            |
-| office-addin-dev-certs             | 1.4.15   |         |         | 1.5.2 *            |
-| office-addin-manifest              |          |         |         | 1.5.0              |
-| source-map-loader                  | 0.2.4    | 0.2.4   | 1.1.1   | 0.2.4              |
-| ts-loader                          | 6.2.2    | 6.2.2   | 8.0.6   | 6.2.2              |
-| typescript                         | 3.9.7    | 3.9.7   | 4.0.3   | 3.9.5              |
-| webpack                            | 4.44.2   | 4.44.2  | 5.1.3   | 4.43.0             |
-| webpack-cli                        | 3.3.12   | 3.3.12  | 4.1.0   | 3.3.12             |
-| zone.js                            | 0.8.29   | 0.8.29  | 0.11.2  | 0.8.29             |
-
+TO DO: Run `npm outdated --long` to see what packages be updated.  Compare `package.json`, `manifest.xml`, and `webpack.config.js` in Formula Forge with those in YoTest.  
 
 ## Copyright
 
