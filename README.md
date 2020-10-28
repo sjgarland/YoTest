@@ -73,7 +73,7 @@ Replace `icon-16.png`, `icon-32.png`, and `icon-80.png` by new icons.  Add `icon
 
 ## Puzzles
 
-Why can Internet Explorer load the taskpane for this add-in, but not for [Formula Forge](https://appsource.microsoft.com/en-us/product/office/WA200001816?tab=Overview), an add-in published in the AppSource marketplace, or for [IEtest](https://github.com/sjgarland.IEtest), an open-source add-in that is a stripped down version of Formula Forge?
+Why can Internet Explorer load the taskpane for this add-in, but not for [Formula Forge](https://appsource.microsoft.com/en-us/product/office/WA200001816?tab=Overview), an add-in published in the AppSource marketplace, or for [IEtest](https://github.com/sjgarland/IEtest), an open-source add-in that is a stripped down version of Formula Forge?
 
 Why doesn't `templateUrl` work inside `@Component` in `app.component.ts`?  Why must this file `require` a template instead?
 
