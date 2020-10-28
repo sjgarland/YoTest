@@ -73,14 +73,10 @@ Replace `icon-16.png`, `icon-32.png`, and `icon-80.png` by new icons.  Add `icon
 
 ## Puzzles
 
+Why can Internet Explorer load the taskpane for this add-in, but not for [Formula Forge](https://appsource.microsoft.com/en-us/product/office/WA200001816?tab=Overview), an add-in published in the AppSource marketplace, or for [IEtest](https://github.com/sjgarland.IEtest), an open-source add-in that is a stripped down version of Formula Forge?
+
 Why doesn't `templateUrl` work inside `@Component` in `app.component.ts`?  Why must this file `require` a template instead?
 
 Why is it necessary to click _Show Taskpane_ twice in the production build to load the taskpane in Excel for Windows?
-
-Why does Internet Explorer no longer load the taskpane for [Formula Forge](https://appsource.microsoft.com/en-us/product/office/WA200001816?tab=Overview), an add-in published in the AppSource marketplace?  Is the problem caused by the versions of the packages listed in `package.json`?
-
-TO DO: Run `npm outdated --long` to see what packages be updated.  Compare `package.json`, `manifest.xml`, and `webpack.config.js` in Formula Forge with those in YoTest.  
-
-## Copyright
 
 Copyright &copy; 2020 Stage One Software. All rights reserved.
